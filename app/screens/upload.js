@@ -225,7 +225,7 @@ class upload extends React.Component{
       { this.state.loggedin == true ? (
         //are logged in
         <View style={{flex:1}}>
-         //Check if an image is selected
+       //Check if an image is selected
          { this.state.imageSelected == true ? (
            <View style={{flex:1}}>
              <View style={{height: 70, paddingTop: 30, backgroundColor: 'white', borderColor: 'lightgrey', borderBottomWidth: 0.5, justifyContent: 'center', alignItems: 'center'}}>
