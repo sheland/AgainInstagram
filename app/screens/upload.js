@@ -106,25 +106,7 @@ class upload extends React.Component{
     };
     oReq.send();
 
-    /*var uploadTask = storage.ref('user/'+userid+'/img').child(FilePath).put(blob);
 
-    uploadTask.on('state_changed', function(snapshot){
-      var progress = ((snapshot.bytesTransferred / snapshot.totalBytes) * 100).toFixed(0);
-      console.log('Upload is '+progress+'% complete');
-      that.setState({
-        progress:progress,
-      });
-    }, function(error) {
-      console.log('error with upload - '+error);
-    }, function(){
-      //complete
-      that.setState({progress:100});
-      uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
-        console.log(downloadURL);
-        that.processUpload(downloadURL);
-      });
-
-    });*/
   };
 
   completeUploadBlob = (blob, FilePath) => {
@@ -225,7 +207,6 @@ class upload extends React.Component{
       { this.state.loggedin == true ? (
         //are logged in
         <View style={{flex:1}}>
-       //Check if an image is selected
          { this.state.imageSelected == true ? (
            <View style={{flex:1}}>
              <View style={{height: 70, paddingTop: 30, backgroundColor: 'white', borderColor: 'lightgrey', borderBottomWidth: 0.5, justifyContent: 'center', alignItems: 'center'}}>
